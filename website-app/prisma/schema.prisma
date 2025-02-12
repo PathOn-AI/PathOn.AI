@@ -24,11 +24,16 @@ model Book {
   @@map("books")
 }
 
+enum SubscriptionStatus {
+  subscribed
+  unsubscribed
+}
+
 model updates_subscribers {
-  id         Int      @id @default(autoincrement())
-  email      String   @unique
-  created_at DateTime @default(now())
-  status     String   
+  id         Int               @id @default(autoincrement())
+  email      String           @unique
+  created_at DateTime         @default(now())
+  status     SubscriptionStatus @default(subscribed)
 
   @@map("updates_subscribers")
 }

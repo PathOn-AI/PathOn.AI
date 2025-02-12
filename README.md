@@ -10,7 +10,7 @@ npx prisma init
 ```
 
 ```
-npx prisma migrate dev --name create_books_table
+npx prisma migrate dev --name create_tables
 ```
 
 ```
@@ -27,3 +27,24 @@ npm install @prisma/client
 ```
 npx prisma db seed
 ```
+
+## Backend
+```
+curl -X POST http://localhost:3000/api/subscribe \
+  -H "Content-Type: application/json" \
+  -d '{"email": "danqing0703@gmail.com"}'
+{"success":true,"message":"Thank you for subscribing to our updates!","data":{"id":1,"email":"danqing0703@gmail.com","created_at":"2025-02-12T08:36:26.604","status":"subscribed"}}
+```
+
+curl -X POST http://localhost:3000/api/subscribe \
+  -H "Content-Type: application/json" \
+  -d '{"email": "danqing0703@gmail.com"}'
+{"message":"You are already subscribed to our updates.","alreadySubscribed":true,"data":{"email":"danqing0703@gmail.com","status":"subscribed","created_at":"2025-02-12T08:36:26.604"}}
+
+```
+curl -X POST http://localhost:3000/api/unsubscribe \
+  -H "Content-Type: application/json" \
+  -d '{"email": "danqing0703@gmail.com"}'
+{"success":true,"message":"You have been successfully unsubscribed from updates."}
+```
+
