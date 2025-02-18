@@ -91,7 +91,7 @@ const Footer = () => {
              href="https://github.com/PathOn-AI"
              className="text-blue-500 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-600"
            >
-             PathOnAI.org
+             PathOn-AI
            </a>
          </div>
        </div>
