@@ -88,7 +88,7 @@ const Footer = () => {
          <div className="text-sm text-gray-800 dark:text-gray-400">
            © {new Date().getFullYear()}, Built by{' '}
            <a
-             href="https://github.com/PathOnAI-org"
+             href="https://github.com/PathOn-AI"
              className="text-blue-500 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-600"
            >
              PathOnAI.org
